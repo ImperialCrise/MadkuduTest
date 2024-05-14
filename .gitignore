@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+client/node_modules
+client/.pnp
+.pnp.js
+
+# testing
+client/coverage
+
+# production
+client/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
