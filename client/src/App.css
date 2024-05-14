@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body
+{
+  background-color: #0A1B26;
 }
 
 .App-logo {
@@ -7,14 +16,7 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +24,133 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color: #D9CCC5;
 }
 
+.container-list
+{
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ACC8E5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .17);
+  color: #112A46;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.container-list > .list
+{
+  min-width: 825px;
+  min-height: 480px;
+}
+
+.charts
+{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.chart-container
+{
+  justify-self: start;
+  margin: 20px;
+}
+.bar-container
+{
+  margin: 20px;
+  justify-self: end;
+}
+
+.animals
+{
+  padding-inline-start: 0;
+  padding: 50px;
+}
+
+.animal-container
+{
+  display: inline-block;
+  margin: 10px;
+}
+
+.animal-container > h5
+{
+  margin: 0;
+}
+.animal-container > h3
+{
+  margin: 0;
+}
+
+.img-container .round
+{
+  border-radius: 10px;
+  object-fit: cover;
+  width: 125px;
+  height: auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .17);
+}
+
+.container-header > input
+{
+  background-color:#ACC8E5;
+  min-height: 30px;
+  font-size: 14px;
+  box-shadow: none;
+  padding: 0 15px;
+  border-radius: 5px;
+  border: 1px solid #ACC8E5;
+}
+
+.container-header
+{
+  min-height: 50px;
+  background-color: #163440;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #ACC8E5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 15px 5px 15px;
+}
+
+.container-header > p {
+  margin-right: auto;
+}
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li.activated
+{
+   border: 1px #112A46 solid;
+   border-radius: 5px;
+}
+
+ul#page-numbers
+{
+  padding: 10px;
+}
+
+#page-numbers > li
+{
+   width: 25px;
+   height: 25px;
+   align-items: center;
+   justify-content: center;
+   display: inline-block;
+   margin: 5px
+}
+
+#page-numbers > li:not(.activated) {
+  transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+
+#page-numbers > li:not(.activated):hover
+{
+   background-color: #112A46;
+  border-radius: 5px;
+  color: #ACC8E5;
+  cursor: pointer;
 }
